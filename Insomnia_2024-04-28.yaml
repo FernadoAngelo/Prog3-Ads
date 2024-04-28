@@ -1,0 +1,213 @@
+_type: export
+__export_format: 4
+__export_date: 2024-04-28T03:03:13.011Z
+__export_source: insomnia.desktop.app:v9.0.0
+resources:
+  - _id: req_cba95e09de41499d97931cf1f898b188
+    parentId: wrk_e7dcd8a0b6e348b2b372be1660a30e8a
+    modified: 1714272487248
+    created: 1711938378387
+    url: http://localhost:3000/task
+    name: Rota para criação de uma nova tarefa.
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+        {
+          "titulo": "Fazer compras3",
+          "dataCriacao": "2024-04-01T08:00:00.000Z",
+          "tipo": "Compras",
+          "categoria": "Supermercado",
+          "status": "Andamento",
+          "usuarioID": "60e1f4bb8a9b134f0828a5ed"
+        }
+    preRequestScript: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/8.6.1
+    authentication: {}
+    metaSortKey: -1711938378387
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: wrk_e7dcd8a0b6e348b2b372be1660a30e8a
+    parentId: null
+    modified: 1711950901910
+    created: 1711938358918
+    name: rotasProg3.yaml
+    description: ""
+    scope: design
+    _type: workspace
+  - _id: req_56f2b68dcf124d3da2d443a8d3aa1e68
+    parentId: wrk_e7dcd8a0b6e348b2b372be1660a30e8a
+    modified: 1714271640624
+    created: 1714072957057
+    url: http://localhost:3000/task/user/60e1f4bb8a9b134f0828a5ed
+    name: "Rota para buscar as tasks de um Usuario "
+    description: ""
+    method: GET
+    body: {}
+    preRequestScript: ""
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/8.6.1
+    authentication: {}
+    metaSortKey: -1714072957057
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_bcdfa384845e44989bd91b3bf7c7239e
+    parentId: wrk_e7dcd8a0b6e348b2b372be1660a30e8a
+    modified: 1714272306205
+    created: 1714271249521
+    url: http://localhost:3000/task/
+    name: Rota para Encontrar Todas As task
+    description: ""
+    method: GET
+    body: {}
+    preRequestScript: ""
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/9.0.0
+    authentication: {}
+    metaSortKey: -1714271249521
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_603fd2f1c415409f92cb64985ea27f93
+    parentId: wrk_e7dcd8a0b6e348b2b372be1660a30e8a
+    modified: 1714272327090
+    created: 1714272301621
+    url: http://localhost:3000/task/660a4bddb37dd89582e3ff67
+    name: Rota pra Encontrar uma Task por ID
+    description: ""
+    method: GET
+    body: {}
+    preRequestScript: ""
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/9.0.0
+    authentication: {}
+    metaSortKey: -1714272301621
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_f721242e70384d5abe47150044966571
+    parentId: wrk_e7dcd8a0b6e348b2b372be1660a30e8a
+    modified: 1714272507924
+    created: 1714272331613
+    url: http://localhost:3000/task/662db8e976135ab36dff5643
+    name: Rota para Atualizar uma Task
+    description: ""
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"titulo": "Fazer compras3",
+        	"dataCriacao": "2024-04-01T08:00:00.000Z",
+        	"tipo": "Compras",
+        	"categoria": "Supermercado",
+        	"userType": "Concluída",
+        	"usuarioID": "60e1f4bb8a9b134f0828a4ed"
+        }
+    preRequestScript: ""
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+      - name: User-Agent
+        value: insomnia/9.0.0
+    authentication: {}
+    metaSortKey: -1714272331613
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_46060f6663274baaba44ebbb90bb1bbd
+    parentId: wrk_e7dcd8a0b6e348b2b372be1660a30e8a
+    modified: 1714272676272
+    created: 1714272659445
+    url: http://localhost:3000/task/662db8e976135ab36dff5643
+    name: Rota para Deletar uma Task
+    description: ""
+    method: DELETE
+    body: {}
+    preRequestScript: ""
+    parameters: []
+    headers:
+      - name: User-Agent
+        value: insomnia/9.0.0
+    authentication: {}
+    metaSortKey: -1714272659445
+    isPrivate: false
+    pathParameters: []
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_f29d92b6955585ac14b5da30102da609e728c8bc
+    parentId: wrk_e7dcd8a0b6e348b2b372be1660a30e8a
+    modified: 1711938358921
+    created: 1711938358921
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1711938358921
+    _type: environment
+  - _id: jar_f29d92b6955585ac14b5da30102da609e728c8bc
+    parentId: wrk_e7dcd8a0b6e348b2b372be1660a30e8a
+    modified: 1711938358923
+    created: 1711938358923
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_a0a07816fb9442cfabed0c090038f96c
+    parentId: wrk_e7dcd8a0b6e348b2b372be1660a30e8a
+    modified: 1711950901909
+    created: 1711938358919
+    fileName: rotasProg3.yaml
+    contents: ""
+    contentType: yaml
+    _type: api_spec

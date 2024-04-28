@@ -1,0 +1,17 @@
+npm init -y 
+cria o ambiente basico para JS
+
+npm i typescript ts-node @types/npm @types/express -d
+--save-dev & -d == --save-dev savar como dependencia de desenvolvimento (devDependencies)
+
+
+npm i mongoose express --save
+
+-p == --save sava como dependencia de produção (Dependencies)
+
+"start": "ts-node ./main.ts"
+Atalho de execução da aplicação 
+
+
+
+
