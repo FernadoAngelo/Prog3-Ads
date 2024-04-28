@@ -25,9 +25,9 @@ export class categoriaService{
             const tasks = await taskModel.find({usuarioID: id})
             
             categorias.forEach(categoria => {
-                const taskAssociada = tasks.some(task => task.categoria === categoria._id.toString())
+                const taskAssociada = tasks.some(task => task.categoriaID === categoria._id.toString())
                 if (taskAssociada) {
-                    categoriaUser.push(categoria );
+                    categoriaUser.push(categoria);
                 }
             });
             return categoriaUser 

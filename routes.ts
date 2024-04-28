@@ -5,28 +5,35 @@ import userControllers from './controllers/user.controllers'
 
 const routes = Router()
     // Rotas Task
-    routes.post('/task', taskController.create)
-    routes.get('/task', taskController.find)
+    routes.post('/task/create', taskController.create)
+    routes.get('/task/find', taskController.find)
     routes.get('/task/user/:id', taskController.findByUserId)
-    routes.get('/task/:id', taskController.findByTaskId)
-    routes.put('/task/:id', taskController.update)
-    routes.delete('/task/:id', taskController.delete)
+    routes.get('/task/taskID/:id', taskController.findByTaskId)
+    routes.put('/task/update/:id', taskController.update)
+    routes.delete('/task/delete/:id', taskController.delete)
 
     // Rotas Categoria
-    routes.post('/categoria', categoriasControllers.create)
-    routes.get('/categoria', categoriasControllers.find)
+    routes.post('/categoria/create', categoriasControllers.create)
+    routes.get('/categoria/find', categoriasControllers.find)
     routes.get('/categoria/user/:id', categoriasControllers.findByUserId)
-    routes.get('/categoria/:id', categoriasControllers.findByTaskId)
-    routes.put('/categoria/:id', categoriasControllers.update)
-    routes.delete('/categoria/:id', categoriasControllers.delete)
+    routes.get('/categoria/taskID/:id', categoriasControllers.findByTaskId)
+    routes.put('/categoria/update/:id', categoriasControllers.update)
+    routes.delete('/categoria/delete/:id', categoriasControllers.delete)
 
     // Rotas Usuario
-    routes.post('/user', userControllers.create)
-    routes.get('/user', userControllers.find)
-    routes.get('/user/:id', userControllers.findByUserId)
-    routes.put('/user/:id', userControllers.update)
-    routes.delete('/user/:id', userControllers.delete)
+    routes.post('/user/create', userControllers.create)
+    routes.get('/user/find', userControllers.find)
+    routes.get('/user/userID/:id', userControllers.findByUserId)
+    routes.put('/user/update/:id', userControllers.update)
+    routes.delete('/user/delete/:id', userControllers.delete)
 
+    //Rota para filtrar tarefas por categoria.
+    routes.get('/task/categoriaID/:id', taskController.findByCategoria)
+    //Rota para listar tarefas concluídas/pendentes.
+    routes.get('/task/status/:status', taskController.findTaskStatus);
+    //Rota para contar o número total de tarefas de um usuário.
+    routes.get('/task/user/:id/count', taskController.findContByUser);
+    
 
 export {
     routes

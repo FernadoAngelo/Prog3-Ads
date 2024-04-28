@@ -5,7 +5,7 @@ const taskSchema = new Schema({
     dataCriacao: { type: Date, default: Date.now },
     dataConclusao: { type: Date, required: false },
     tipo: String,
-    categoria: { type: String, required: false },
+    categoriaID: { type: String, required: false },
     status: {
         type: String,
         enum : ['Pendente','Andamento','Concluída'],
